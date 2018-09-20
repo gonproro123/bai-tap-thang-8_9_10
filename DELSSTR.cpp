@@ -8,6 +8,8 @@ deque<char> Q;
 deque<char> Q_Clone;
 int main()
 {
+    freopen("DELSSTR.INP","r",stdin);
+    freopen("DELSSTR.OUT","w",stdout);
     cin >> b >> a ;
     int a_len= a.size();
     int b_len= b.size();
