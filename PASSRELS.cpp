@@ -4,7 +4,7 @@ using namespace std;
 
 const int N = 1e5 + 5;
 
-int n, res, a[N], Max[N];
+int n, res = 1e8, a[N];
 
 void Input()
 {
@@ -13,20 +13,13 @@ void Input()
         cin >> a[i];
 
     sort(a + 1, a + n + 1);
-    for (int i = 1; i <= n; i++)
-        Max[i] = max(Max[i - 1], a[i]);
 }
 
 void Solve()
 {
-    for (int i = n; i >= 1; i--)
-    {
-        if (Max[i - 1] <= n - i + 1)
-        {
-            cout << n - i + 1 << '\n';
-            return;
-        }
-    }
+    for (int i = n + 1; i >= 1; i--)
+        res = min(res, a[i - 1] + n - i + 1);
+    cout << res << '\n';
 }
 
 int main()
