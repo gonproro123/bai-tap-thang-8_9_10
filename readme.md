@@ -1,1 +1,1 @@
-WELL COME TO "ĐỘNG ĐỰC"
+OCC KHANG HUY 
